@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     
     
     // query to change status of the device from "no-power" to "power is ok"
-    char deleteBrokenStatus[256] = "UPDATE device SET no_power = 0 WHERE no_power = 1";
+    char deleteBrokenStatus[256] = "UPDATE device SET no_power = 0";
     
     rc = sqlite3_exec(db, deleteBrokenStatus, 0, 0, &err_msg);   
         
